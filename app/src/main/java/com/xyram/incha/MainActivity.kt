@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(), MedicineListAdapter.OnClick, LabListAd
     }
 
     private fun initView() {
-        typeList.add("Medicine")
+      /*  typeList.add("Medicine")
         typeList.add("Lab Test")
         typeList.add("Therapy")
         binding.back.setOnClickListener {
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity(), MedicineListAdapter.OnClick, LabListAd
             }
 
             popupMenu.setOnMenuItemClickListener { item ->
-                binding.type.setText(item.title)
+                binding.type?.setText(item.title)
                 if (binding.type.text.toString().equals("Medicine", true)) {
                     binding.list.setHint("Select Medicine")
                 }
@@ -225,10 +225,10 @@ class MainActivity : AppCompatActivity(), MedicineListAdapter.OnClick, LabListAd
 
         binding.list.threshold = 1
         binding.list.setAdapter(searchAdapter)
-
+*/
     }
 
-    private fun setTherapyListAdapter() {
+   /* private fun setTherapyListAdapter() {
 
         therapyListAdapter = TherapyListAdapter(this, this, therapyList)
         binding.rvTherapyList.adapter = therapyListAdapter
@@ -250,7 +250,7 @@ class MainActivity : AppCompatActivity(), MedicineListAdapter.OnClick, LabListAd
         binding.rvMedicineList.adapter = medicineListAdapter
         binding.rvMedicineList.layoutManager = LinearLayoutManager(this)
 
-    }
+    }*/
 
     override fun onDeleteMedicine() {
     }
